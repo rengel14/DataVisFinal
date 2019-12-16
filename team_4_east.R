@@ -158,8 +158,7 @@ server <- function(input, output) {
     council_schools.subset <- reactive({
         council_schools_df %>% 
             filter(Council_Me %in% input$council_members) %>% 
-            filter(SchoolType %in% input$school_types) %>% 
-            arrange(desc(Num))
+            filter(SchoolType %in% input$school_types) 
     })
 
     # Summarize the census data to get totals    
